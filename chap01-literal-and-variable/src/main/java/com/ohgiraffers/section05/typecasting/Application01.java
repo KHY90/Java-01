@@ -61,7 +61,6 @@ public class Application01 {
 
         System.out.println("ch2 : " + ch2);
 
-
         boolean isTrue = true;
 
         // byte b = isTrue;
