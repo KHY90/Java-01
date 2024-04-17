@@ -11,7 +11,7 @@ public class Application01 {
         *  더 쉽게 누군가 작성해놓은 소스코드를 가져다 소용하는 것이다.
         * */
 
-        System.out.println(java.lang.Math.abs(758));
+        System.out.println(java.lang.Math.abs(-758));
 
 
     }
