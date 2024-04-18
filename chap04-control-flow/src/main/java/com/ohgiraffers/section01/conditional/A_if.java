@@ -51,6 +51,7 @@ public class A_if {
 //   }
 //       return ""+result;// (= return String.valueOf(result);)//(result를 str 값으로 변환)
 // }
+
     public String call () {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
@@ -64,4 +65,3 @@ public class A_if {
         return "" + result;
     }
 }
-
