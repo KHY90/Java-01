@@ -13,7 +13,6 @@ public class Application {
         Scanner sc = new Scanner(System.in);
         boolean order = true;
         String result = "";
-        String result2 = "";
 
         while(order){
 
@@ -26,33 +25,52 @@ public class Application {
 
             int input = sc.nextInt();
             sc.nextLine();
-            OrderDTO orderDTO = new OrderDTO();
 
             switch(input){
                 case 1 : //주문등록
-                    System.out.println("주문할 메뉴 이름을 등록해주세요. : ");
-                    orderDTO.setMenuName(sc.nextLine());
+
+                    System.out.println("주문할 메뉴 이름을 알려주세요. : ");
+                    String menuName = sc.nextLine();
+
                     System.out.println("수량을 입력해 주세요. : ");
                     int quantity = sc.nextInt();
+
                     System.out.println("가격을 입력해주세요. : ");
                     int price = sc.nextInt();
-                    orderDTO.setQuantity(quantity, price);
+
+                    OrderDTO orderDTO = new OrderDTO(menuName,price,quantity);
 
                     result = orderController.order(orderDTO);
                     break;
 
                 case 2 : //주문삭제
-                    orderController.orderDelete();
+
+                    System.out.println("삭제할 제품의 번호를 입력해주세요.");
+
+                    int nom = Integer.parseInt(sc.nextLine());
+
+                    result = nom + "번 ";
+                    result += orderController.orderDelete(nom);
                     break;
+
                 case 3 : //주문수정
                     orderController.orderModify();
                     break;
+
                 case 4 : //주문상세조회
-                    orderController.orderRead();
+
+                    System.out.println(orderController.OrderDetail());
+
+                    System.out.println("상세 조회하실 주문 순서를 적어주세요. : ");
+
+                    int serch = sc.nextInt();
+                    sc.nextLine();
+                    result = orderController.orderRead(serch);
                     break;
 
                 case 5 : //주문전체조회
-                    orderController.printOrderDetail();
+
+                    result = orderController.OrderDetail();
                     break;
 
                 default :
