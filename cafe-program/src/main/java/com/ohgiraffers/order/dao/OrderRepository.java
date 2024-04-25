@@ -11,12 +11,16 @@ public class OrderRepository {
 
     private final ArrayList orders = new ArrayList();
 
-    public final String order(OrderDTO orderDTO){
+    public final String order(OrderDTO[] orders){
         // 0
-        int oldNum = orders.size();
 
-        orders.add(orderDTO);
-        if(oldNum >= orders.size()){
+        int oldNum = orderDB.getOrders().size();
+
+        for(OrderDTO orderDTO : orders){
+         orderDB.setItem(orderDTO);
+        }
+
+        if(oldNum >= orderDB.getOrders().size()){
             return "등록실패";
         }
         return "등록성공";

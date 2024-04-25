@@ -11,15 +11,18 @@ public class OrderService {
 
     private final OrderRepository orderRepository = new OrderRepository();
 
-    public String order(OrderDTO orderDTO){ // 주문 등록
-        if(!orderDTO.getMenuName().equals("아메리카노")){
-            return "주문 실패";
-        }
-        if(orderDTO.getPrice() <= 0){
-            return "땅파서 장사하냐?";
-        }
+    public String order(OrderDTO[] orders){ // 주문 등록
 
-        String result = orderRepository.order(orderDTO);
+//        if(!orderDTO.getMenuName().equals("아메리카노")){
+//            return "주문 실패";
+//        }
+        for(OrderDTO orderDTO : orders) {
+
+            if (orderDTO.getPrice() <= 0) {
+                return "땅파서 장사하냐?";
+            }
+        }
+        String result = orderRepository.order(orders);
 
         return result;
     }

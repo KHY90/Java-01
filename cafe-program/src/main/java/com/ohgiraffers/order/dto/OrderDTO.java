@@ -10,6 +10,9 @@ public class OrderDTO {
 
     private int total;
 
+    public OrderDTO(){
+
+    }
 
     public OrderDTO(String menuName, int price, int quantity){
         this.menuName = menuName;

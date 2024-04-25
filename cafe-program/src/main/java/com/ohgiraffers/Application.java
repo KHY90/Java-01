@@ -28,19 +28,26 @@ public class Application {
 
             switch(input){
                 case 1 : //주문등록
+                    System.out.println("몇개의 음료를 주문하실껀가요? ");
+                    int cnt = sc.nextInt();
+                    sc.nextLine();
 
-                    System.out.println("주문할 메뉴 이름을 알려주세요. : ");
-                    String menuName = sc.nextLine();
+                    OrderDTO[] orders = new OrderDTO[cnt];
+                    for(int i = 0; i < orders.length; i++){
+                        System.out.println("주문할 메뉴 이름을 알려주세요. : ");
+                        String menuName = sc.nextLine();
 
-                    System.out.println("수량을 입력해 주세요. : ");
-                    int quantity = sc.nextInt();
+                        System.out.println("수량을 입력해 주세요. : ");
+                        int quantity = sc.nextInt();
 
-                    System.out.println("가격을 입력해주세요. : ");
-                    int price = sc.nextInt();
+                        System.out.println("가격을 입력해주세요. : ");
+                        int price = sc.nextInt();
+                        sc.nextLine();
 
-                    OrderDTO orderDTO = new OrderDTO(menuName,price,quantity);
+                        orders[i] = new OrderDTO(menuName, quantity, price);
+                    }
 
-                    result = orderController.order(orderDTO);
+                    result = orderController.order(orders);
                     break;
 
                 case 2 : //주문삭제
