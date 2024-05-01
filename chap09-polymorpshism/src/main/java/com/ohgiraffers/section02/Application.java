@@ -24,20 +24,19 @@ public class Application {
          *  public abstract class Product(){
          *      public abstract void method();
          *  }
-         *
          * */
-//
+
 //        Product pro = new Product();  추상클래스는 인스턴스 생성 불가
 //        SmartPhone smartPhone = new SmartPhone();
 //        smartPhone.printSmartPhone();
 //        smartPhone.absMethod();
 //        System.out.println("=========구분=========");
-//
+
 //        Product product = new SmartPhone();
 //        product.absMethod();
 //        product.nonStatidMethod();
 //        System.out.println("=========구분=========");
-//
+
 //        Product product2 = new Product() {
 //            @Override
 //            public void absMethod() {

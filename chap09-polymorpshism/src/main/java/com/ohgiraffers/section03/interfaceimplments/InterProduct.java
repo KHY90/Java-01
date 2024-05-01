@@ -39,6 +39,4 @@ public interface InterProduct extends Serializable {
         System.out.println("InterProduct 클래스의 defaultMethod 호출됨");
     }
 
-
-
 }
