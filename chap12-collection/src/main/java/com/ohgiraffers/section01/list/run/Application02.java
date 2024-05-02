@@ -41,7 +41,8 @@ public class Application02 {
             System.out.println(book);
         }
 
-//        bookDTOList.sort(new Comparator<BookDTO>() {
+//        bookDTOList.sort(new Comparator<BookDTO>(){
+//
 //            @Override
 //            public int compare(BookDTO o1, BookDTO o2) {
 //
@@ -56,9 +57,9 @@ public class Application02 {
 //                }
 //                return result;
 //            }
-
-        }
+//
+//        }
 
     }
 
-
+}

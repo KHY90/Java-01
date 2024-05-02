@@ -2,7 +2,7 @@ package com.ohgiraffers.section01.list.run;
 
 import java.util.*;
 
-public class Application {
+public class Application01 {
 
     public static void main(String[] args){
 
@@ -68,7 +68,7 @@ public class Application {
         stringList = new LinkedList<>(stringList);
         /*
         * Iterator란?
-        * Collection 인터페이스의 iterator() 메소드를 이요해서 인스턴스를 생성할 수 있다.
+        * Collection 인터페이스의 iterator() 메소드를 이용해서 인스턴스를 생성할 수 있다.
         * 컬렉션에서 값을 읽어오는 방식을 통일된 방식으로 제공하기 위해 사용된다.
         * 반복자 라고 불리우며, 반복문을 이용해서 목록을 하나씩 꺼내오는 방식으로 사용하기 위함이다.
         * 인덱스로 관리되는 컬렉션이 아닌 경우에는 반복문을 사용해서 요소에 하나씩 접근할 수 없기 때문에
@@ -84,6 +84,7 @@ public class Application {
 //        }
 //        System.out.println(dIter);
 
+        System.out.println("====================");
         List<String> descList = new ArrayList<>();
         while (dIter.hasNext()){
             descList.add(dIter.next());
@@ -92,7 +93,5 @@ public class Application {
         for(int i = 0; i < descList.size(); i++){
             System.out.println(descList.get(i));
         }
-
     }
-
 }

@@ -42,6 +42,7 @@ public class Application03 {
         System.out.println(linkedList);
 
         System.out.println(linkedList.isEmpty());
+
         // 리스트를 초기화함
         linkedList.clear();
         System.out.println(linkedList.isEmpty());

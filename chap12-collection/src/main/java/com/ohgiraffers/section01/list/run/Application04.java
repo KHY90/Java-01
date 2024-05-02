@@ -9,7 +9,7 @@ public class Application04 {
         /*
         * Stack
         * Stack은 리스트 계열 클래스의 Vector 클래스를 상속받아 구현하였다.
-        * 스택 메모리 구조느 ㄴ선형 메모리 공간에 데이터를 저장하며
+        * 스택 메모리 구조는 선형 메모리 공간에 데이터를 저장하며
         * 후입선출(LIFO - last Input First Out)방식의 자료 구조라 부른다.
         * */
         Stack<Integer> integerStack = new Stack<>();
